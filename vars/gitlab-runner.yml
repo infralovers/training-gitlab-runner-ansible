@@ -1,0 +1,18 @@
+gitlab_runner_registration_token: '<registration-token>'
+gitlab_runner_coordinator_url: 'https://gitlab.commandemy.training/'
+gitlab_runner_runners:
+  - name: 'Example Docker GitLab Runner'
+    executor: docker
+    docker_image: 'alpine'
+    tags:
+      - docker
+    extra_configs:
+      runners.docker:
+        tls_verify: false
+        image: "docker:19.03.1"
+        privileged: true
+        disable_entrypoint_overwrite: false
+        oom_kill_disable: false
+        disable_cache: false
+        volumes: ["/certs/client","/cache"]
+        shm_size: 0
