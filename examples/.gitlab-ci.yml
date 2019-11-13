@@ -1,0 +1,18 @@
+image: infralovers/markdown-pdf:0.2
+
+stages:
+  - lint
+  - build
+  
+lintMarkdown:
+  stage: lint
+  script:
+    - markdownlint *.md
+
+buildPdf:
+  stage: build
+  script:
+    - markdown-pdf *.md
+  artifacts:
+    paths:
+      - ./*.pdf
