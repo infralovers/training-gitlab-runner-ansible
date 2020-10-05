@@ -1,1 +1,1 @@
-gitlab-runner ansible_host=gitlab-git-01.commandemy.training
+gitlab-runner ansible_host=gitlab.git-user-<your-user-number>-i-01.commandemy.training
