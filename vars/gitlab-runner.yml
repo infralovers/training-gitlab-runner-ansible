@@ -1,5 +1,5 @@
 gitlab_runner_registration_token: '<registration-token>'
-gitlab_runner_coordinator_url: 'https://gitlab.commandemy.training/'
+gitlab_runner_coordinator_url: 'https://gitlab.<ENV-ANIMAL>.commandemy.training/'
 gitlab_runner_runners:
   - name: 'Example Docker GitLab Runner'
     executor: docker
